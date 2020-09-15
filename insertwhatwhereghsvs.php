@@ -9,7 +9,6 @@ class PlgSystemInsertwhatwhereghsvs extends CMSPlugin
 {
 	protected $app;
 
-
 	public function onAfterRender()
 	{
 		if (
