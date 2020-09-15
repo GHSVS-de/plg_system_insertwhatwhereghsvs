@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_INSERTWHATWHEREGHSVS</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer (GHSVS.de)</author>
+	<creationDate>2020-09-15</creationDate>
+	<copyright>(C) 2020, G@HService Berlin Neukölln, Volkmar Volli Schlothauer (GHSVS.de). All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+	<authorUrl>https://www.ghsvs.de</authorUrl>
+	<version>2020.09.15</version>
+	<description>PLG_SYSTEM_INSERTWHATWHEREGHSVS_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="insertwhatwhereghsvs">insertwhatwhereghsvs.php</filename>
+		<filename>LICENSE.txt</filename>
+		<folder>language</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field type="hidden" default="1" name="insertwhatwhereghsvsplugin" />
+			</fieldset>
+
+			<fieldset name="insertWhat" label="Insert what?">
+
+				<field name="insertWhatSpacer" type="note" class="alert"
+					label="Field Insert what?"
+					description="... uses filter 'JComponentHelper::filterText'. Depending on your Joomla rights/group it's possible that you can't enter everything you want. Check if everything is still there after saving."/>
+
+				<field name="insertWhere" type="list" default="0" filter="string"
+					label="Insert where?"
+					description="">
+					<option value="0">JNONE</option>
+					<option value="afterHead">after opening &lt;head&gt; tag</option>
+					<option value="before/head">before closing &lt;/head&gt; tag</option>
+					<option value="afterBody">after opening &lt;body&gt; tag</option>
+					<option value="before/body">before closing &lt;/body&gt; tag</option>
+					<option value="after/body">after closing &lt;/body&gt; tag</option>
+					<option value="before/html">before closing &lt;/html&gt; tag</option>
+					<option value="after/html">after closing &lt;/html&gt; tag</option>
+				</field>
+				
+				<field name="insertWhat" type="textarea" default=""
+					class="input-xxlarge"
+					filter="JComponentHelper::filterText"
+					label="Insert what?"
+					description="" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>
