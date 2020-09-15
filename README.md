@@ -1,2 +1,3 @@
-# plg_system_insertwhatwhereghsvs
+# Joomla plugin plg_system_insertwhatwhereghsvs
  
+Insert whatever before/after specific HTML tags like HEAD, BODY...
