@@ -1,9 +1,7 @@
 <?php
-defined('JPATH_BASE') or die;
+\defined('_JEXEC') or die;
 
 use Joomla\CMS\Plugin\CMSPlugin;
-#use Joomla\CMS\Language\Text;
-#use Joomla\CMS\Factory;
 
 class PlgSystemInsertwhatwhereghsvs extends CMSPlugin
 {
@@ -17,7 +15,7 @@ class PlgSystemInsertwhatwhereghsvs extends CMSPlugin
 		){
 			return;
 		}
-		
+
 		$insertThis = trim($this->params->get('insertWhat', ''));
 		$insertWhere = $this->params->get('insertWhere', 0);
 
@@ -38,38 +36,39 @@ class PlgSystemInsertwhatwhereghsvs extends CMSPlugin
 		{
 			case 'afterHead':
 				$muster = '/<head[^>]*>/';
+
 				if (preg_match($muster, $buffer, $match))
 				{
 					$buffer = str_replace($match[0], $match[0] . $insertThis, $buffer);
 				}
-				break;
+			break;
 			case 'before/head':
 				$buffer = str_replace('</head>', $insertThis . '</head>', $buffer);
-				break;
+			break;
 			case 'afterBody':
 				$muster = '/<body[^>]*>/';
+
 				if (preg_match($muster, $buffer, $match))
 				{
 					$buffer = str_replace($match[0], $match[0] . $insertThis, $buffer);
 				}
-				break;
+			break;
 			case 'before/body':
 				$buffer = str_replace('</body>', $insertThis . '</body>', $buffer);
-				break;
+			break;
 			case 'after/body':
 				$buffer = str_replace('</body>', '</body>' . $insertThis, $buffer);
-				break;
+			break;
 			case 'after/html':
 				$buffer = str_replace('</html>', '</html>' . $insertThis, $buffer);
-				break;
+			break;
 			case 'before/html':
 				$buffer = str_replace('</html>', $insertThis . '</html>', $buffer);
-				break;
+			break;
 			default:
-				return;
+			return;
 		}
-		
+
 		$this->app->setBody($buffer);
 	}
-
 }

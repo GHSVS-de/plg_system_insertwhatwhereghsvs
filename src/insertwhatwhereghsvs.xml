@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="{{type}}" client="{{client}}" group="{{folder}}" method="upgrade">
+	<name>{{nameUpper}}</name>
+	<author>{{authorName}}</author>
+	<creationDate>{{creationDate}}</creationDate>
+	<copyright>{{copyright}}</copyright>
+	<license>{{licenseLong}}</license>
+	<authorUrl>{{authorUrl}}</authorUrl>
+	<version>{{version}}</version>
+	<description>{{nameUpper}}_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="{{nameUpper}}">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/{{name}}-update.xml</server></updateservers>
+
+	<changelogurl>https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/{{name}}-changelog.xml</changelogurl>
+
+	<infourl>https://github.com/GHSVS-de/{{name}}#readme</infourl>
+
+	<downloadUrl>
+	https://github.com/GHSVS-de/{{name}}/raw/{{version}}/dist/{{zipFilename}}
+	</downloadUrl>
+
+	<versionCompare>
+	https://github.com/GHSVS-de/{{name}}/compare/{{versionCompare}}...{{version}}
+	</versionCompare>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>{{minimumPhp}}</minimumPhp>
+	<maximumPhp>{{maximumPhp}}</maximumPhp>
+	<minimumJoomla>{{minimumJoomla}}</minimumJoomla>
+	<maximumJoomla>{{maximumJoomla}}</maximumJoomla>
+	<allowDowngrades>{{allowDowngrades}}</allowDowngrades>
+
+	<files>
+		<filename plugin="{{filename}}">{{filename}}.php</filename>
+		<filename>installerScript.php</filename>
+		<filename>LICENSE.txt</filename>
+		<folder>language</folder>
+	</files>
+	{{namespace}}
+
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic">
+				<field type="hidden" default="1" name="insertwhatwhereghsvsplugin" />
+			</fieldset>
+
+			<fieldset name="insertWhat" label="Insert what?">
+
+				<field name="insertWhatSpacer" type="note" class="alert alert-info"
+					label="PLG_SYSTEM_INSERTWHATWHEREGHSVS_INSERTWHAT"
+					description="PLG_SYSTEM_INSERTWHATWHEREGHSVS_INSERTWHAT_DESC"/>
+
+				<field name="insertWhat" type="textarea" default=""
+					class="input-xxlarge"
+					filter="JComponentHelper::filterText"
+					label="PLG_SYSTEM_INSERTWHATWHEREGHSVS_INSERTWHAT" />
+
+				<field name="insertWhere" type="list" default="0" filter="string"
+					label="PLG_SYSTEM_INSERTWHATWHEREGHSVS_INSERTWHERE">
+					<option value="0">JNONE</option>
+					<option value="afterHead">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_AFTERHEAD</option>
+					<option value="before/head">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_BEFORE_HEAD</option>
+					<option value="afterBody">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_AFTERBODY</option>
+					<option value="before/body">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_BEFORE_BODY</option>
+					<option value="after/body">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_AFTER_BODY</option>
+					<option value="before/html">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_BEFORE_HTML</option>
+					<option value="after/html">PLG_SYSTEM_INSERTWHATWHEREGHSVS_OPTION_AFTER_HTML</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
