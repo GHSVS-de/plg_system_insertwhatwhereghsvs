@@ -2,6 +2,7 @@
 
 Insert whatever before/after specific HTML tags like HEAD, BODY...
 
+## Hint
 If you use relative paths in href or src, e.g. when you insert `<link href="templates/bimbam/css/myoverrides.css" rel="stylesheet" />` take care that plugin "System - SEF" runs after this plugin (see image 3 below). You can reorder them in Joomla by Drag&Drop.
 
 -----
