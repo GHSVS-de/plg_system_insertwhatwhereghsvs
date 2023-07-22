@@ -2,8 +2,9 @@
 	"name": "plg_system_insertwhatwhereghsvs",
 	"nameReal": "plg_system_insertwhatwhereghsvs",
 	"filename": "insertwhatwhereghsvs",
-	"version": "2022.04.08",
-	"versionCompare": "2020.09.15",
+	"version": "2023.07.22",
+	"versionCompare": "2022.04.08",
+	"versionSub": "",
 	"update": {
 		"type": "plugin",
 		"folder": "system",
@@ -13,7 +14,7 @@
 			"3.*",
 			"4.*"
 		],
-		"namespace": "Joomla\\Plugin\\System\\insertwhatwhereGhsvs"
+		"namespace": "GHSVS\\Plugin\\System\\insertwhatwhereGhsvs"
 	},
 	"releaseTxt": {
 		"title": "Joomla system plugin InsertWhatWhereGhsvs",
