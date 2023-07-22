@@ -6,6 +6,7 @@
 	"versionCompare": "2022.04.08",
 	"versionSub": "",
 	"update": {
+		"infourl": "https://github.com/GHSVS-de/plg_system_insertwhatwhereghsvs{{thisRelease}}",
 		"type": "plugin",
 		"folder": "system",
 		"client": "site",
