@@ -44,7 +44,7 @@
 
 				<field name="insertWhat" type="textarea" default=""
 					class="input-xxlarge"
-					filter="JComponentHelper::filterText"
+					filter="\Joomla\CMS\Component\ComponentHelper::filterText"
 					label="PLG_SYSTEM_INSERTWHATWHEREGHSVS_INSERTWHAT" />
 
 				<field name="insertWhere" type="list" default="0" filter="string"
